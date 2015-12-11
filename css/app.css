@@ -1,0 +1,32 @@
+main {
+  width: 90vw;
+  height: 95vh;
+  margin: 2.5vh 5vw;
+  background-color: gray;
+}
+
+.freezer {
+  height: 35%;
+  width: 100%;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+}
+.fridge {
+  margin-top: 0.5vh;
+  height: 55%;
+  width: 100%;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+}
+.titlecard {
+  float: right;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  height: 60%;
+  width: 30%;
+  background-color: white;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+}

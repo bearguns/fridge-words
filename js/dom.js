@@ -14,9 +14,6 @@ $(document).ready(function() {
   });
   $("#submit").click(function(){
     displayToggle(overlay, fridge, freezer);
-    // revealer(overlay);
-    // hider(freezer);
-    // hider(fridge);
     var frozenpeas = $(".freezer > p");
     frozenpeas = jQuery.makeArray(frozenpeas);
     finalString =[];
@@ -30,5 +27,7 @@ $("#return").click(function(){
   displayToggle(overlay,fridge,freezer);
   $(".showpoem p").remove();
 });
-
+$("#share").click(function(){
+  tweet(finalString);
+})
 });

@@ -56,3 +56,11 @@ function displayToggle(element1,element2,element3){
   element2.fadeToggle("slow");
   element3.fadeToggle("slow");
 }
+// post to twitter
+function tweet(string){
+  $.ajax({
+    url: "https://api.twitter.com/1.1/statuses/update.json",
+    method: "POST",
+    status: string
+  });
+}

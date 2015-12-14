@@ -11,7 +11,7 @@ $(document).ready(function() {
     writeWords(wordList, fridge);
   });
   $("#submit").click(function(){
-    $(".overlay").show();
+    $(".overlay").fadeIn("slow");
     var frozenpeas = $(".freezer > p");
     frozenpeas = jQuery.makeArray(frozenpeas);
     for (var i = 0; i < frozenpeas.length; i++) {

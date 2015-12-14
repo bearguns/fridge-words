@@ -12,6 +12,17 @@ main {
   background-color: white;
   opacity: 0.9;
 }
+.showpoem {
+  font-size: 4vh;
+  height: 300px;
+  width: 400px;
+  margin-left: 40px;
+  background-color: white;
+  position: absolute;
+  opacity: 1.0;
+  z-index: 99;
+}
+
 .freezer {
   height: 35%;
   width: 100%;

@@ -13,21 +13,21 @@ $(document).ready(function() {
     writeWords(wordList, fridge);
   });
   $("#submit").click(function(){
-    showpoem.remove("p");
-    revealer(overlay);
-    hider(freezer);
-    hider(fridge);
+    displayToggle(overlay, fridge, freezer);
+    // revealer(overlay);
+    // hider(freezer);
+    // hider(fridge);
     var frozenpeas = $(".freezer > p");
     frozenpeas = jQuery.makeArray(frozenpeas);
+    finalString =[];
     for (var i = 0; i < frozenpeas.length; i++) {
       finalString.push(frozenpeas[i].innerText);
     };
-    showpoem.append("<p>"+finalString.toString().split(',').join(' ')+"</p>");
+    finalString = finalString.toString().split(',').join(' ');
+    showpoem.append("<p>"+finalString+"</p>");
   });
 $("#return").click(function(){
-  hider(overlay);
-  revealer(freezer);
-  revealer(fridge);
+  displayToggle(overlay,fridge,freezer);
 });
 
 });

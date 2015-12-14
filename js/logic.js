@@ -50,3 +50,9 @@ function hider(element){
 function revealer(element){
   element.fadeIn("slow");
 }
+
+function displayToggle(element1,element2,element3){
+  element1.fadeToggle("slow");
+  element2.fadeToggle("slow");
+  element3.fadeToggle("slow");
+}

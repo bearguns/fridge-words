@@ -3,7 +3,7 @@ main {
   width: 90vw;
   height: 95vh;
   margin: 2.5vh 5vw;
-  background-color: gray;
+  background-color: white;
 }
 .overlay {
   position: absolute;
@@ -32,7 +32,7 @@ main {
 }
 .fridge {
   margin-top: 0.5vh;
-  height: 55%;
+  height: 60%;
   width: 100%;
   background-color: #eeeeee;
   border: 1px solid #eeeeee;

@@ -19,6 +19,11 @@ ajaxi.done(function(response){
     console.log(i.word);
   });
 });
+function writeWords(array, container) {
+  array.forEach(function(i){
+    container.append("<p>" + i.word + "</p>");
+  });
+}
 // write words to page
 function writePreps(num, container) {
   while (num > 0) {
@@ -29,4 +34,8 @@ function writePreps(num, container) {
     $(container).append("<p>not</p>");
     num--;
   }
+}
+// concat words in container into a string
+function makeArray(container) {
+  return $(container).toArray();
 }

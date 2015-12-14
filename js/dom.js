@@ -4,14 +4,17 @@ $(document).ready(function() {
   var fridge = $(".fridge");
   var titlecard = $(".titlecard")
   var start = $("#start");
+  var finalString = [];
   $(start).click(function(){
     writePreps(makeRandom(), fridge);
-    writeWords(wordList);
+    writeWords(wordList, fridge);
   });
-  function writeWords(array) {
-    array.forEach(function(i){
-      fridge.append("<p>" + i.word + "</p>");
-    });
-  }
-
+  $("#submit").click(function(){
+    var frozenpeas = $(".freezer > p");
+    frozenpeas = jQuery.makeArray(frozenpeas);
+    for (var i = 0; i < frozenpeas.length; i++) {
+      finalString.push(frozenpeas[i].innerText);
+    };
+    titlecard.append(finalString.toString().split(',').join(' '));
+  });
 });

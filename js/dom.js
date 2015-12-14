@@ -28,6 +28,7 @@ $(document).ready(function() {
   });
 $("#return").click(function(){
   displayToggle(overlay,fridge,freezer);
+  $(".showpoem p").remove();
 });
 
 });

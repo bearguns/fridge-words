@@ -24,6 +24,24 @@ function writeWords(array, container) {
     container.append("<p>" + i.word + "</p>");
   });
 }
+// loop to make API call and generate numbers
+
+// // function to make API call for random word
+// function getAjax(){
+// ajaxi = $.ajax({
+//   url: 'https://www.wordnik.com/randoml', // The URL to the API. You can get this in the API page of the API you intend to consume
+//   type: 'GET',
+//   dataType: 'json',
+//   // headers: {
+//   //   "Access-Control-Allow-Origin": "www.wordnik.com"
+//   // },
+//   success: function(response){
+//     console.log(response);
+//   }
+//   })
+//   // console.log(wordList);
+// }
+
 // write words to page
 function writePreps(num, container) {
   while (num > 0) {

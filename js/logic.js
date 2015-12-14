@@ -32,10 +32,21 @@ function writePreps(num, container) {
     $(container).append("<p>can\'t</p>");
     $(container).append("<p>did</p>");
     $(container).append("<p>not</p>");
+    $(container).append("<p>for</p>");
+    $(container).append("<p>and</p>");
+    $(container).append("<p>is</p>");
     num--;
   }
 }
 // concat words in container into a string
 function makeArray(container) {
   return $(container).toArray();
+}
+// hide shit
+function hider(element){
+  element.fadeOut("slow");
+}
+// reveal shit
+function revealer(element){
+  element.fadeIn("slow");
 }

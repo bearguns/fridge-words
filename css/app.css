@@ -49,6 +49,7 @@ main {
   border-radius: 10px;
 }
 p {
+  font-family: courier;
   display: inline-block;
   cursor: default;
   background-color: white;

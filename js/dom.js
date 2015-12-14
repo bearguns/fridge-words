@@ -1,5 +1,6 @@
 $(document).ready(function() {
   dragula([document.querySelector(".freezer"), document.querySelector(".fridge")]);
+  $(".overlay").hide();
   var freezer = $(".freezer");
   var fridge = $(".fridge");
   var titlecard = $(".titlecard")
@@ -10,6 +11,7 @@ $(document).ready(function() {
     writeWords(wordList, fridge);
   });
   $("#submit").click(function(){
+    $(".overlay").show();
     var frozenpeas = $(".freezer > p");
     frozenpeas = jQuery.makeArray(frozenpeas);
     for (var i = 0; i < frozenpeas.length; i++) {

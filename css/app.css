@@ -30,3 +30,10 @@ main {
   border: 2px solid lightgray;
   border-radius: 10px;
 }
+p {
+  display: inline-block;
+  cursor: default;
+  background-color: white;
+  font-size: 2vh;
+  margin: 2px;
+}

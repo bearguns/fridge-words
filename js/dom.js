@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  $(document).on('click',function (){
+  $(".fridge > p").draggable();
+});
   var freezer = $(".freezer");
   var fridge = $(".fridge");
   var titlecard = $(".titlecard")

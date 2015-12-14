@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(document).on('click',function (){
-  $(".fridge > p").draggable();
+  $(".fridge > p").draggable().sortable();
 });
   var freezer = $(".freezer");
   var fridge = $(".fridge");

@@ -67,3 +67,17 @@ function tweet(string){
     status: string
   });
 }
+// make random rotation amount
+function rotato() {
+var num = Math.floor(Math.random()*5) + 1; // this will get a number between 1 and 99;
+num *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+return num;
+}
+// apply rotation
+function rotate(container) {
+  var fridgepeas = $(".fridge > p");
+  fridgepeas = jQuery.makeArray(fridgepeas);
+  for (var i = 0; i < fridgepeas.length; i++) {
+    $(fridgepeas[i]).css('transform', 'rotate(' + parseInt(rotato()) + 'deg)')
+  }
+}

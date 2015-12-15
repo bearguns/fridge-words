@@ -11,6 +11,7 @@ $(document).ready(function() {
   $(start).click(function(){
     writePreps(makeRandom(), fridge);
     writeWords(wordList, fridge);
+    rotate(fridge);
   });
   $("#submit").click(function(){
     displayToggle(overlay, fridge, freezer);

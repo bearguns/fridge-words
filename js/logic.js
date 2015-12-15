@@ -1,11 +1,11 @@
-var wordCount = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
+var wordCount = Math.floor(Math.random() * (20 - 10 + 1)) + 10;
 var wordList = [];
 function makeRandom() {
   return Math.floor(Math.random() * (4 - 2 + 1)) + 1;
 };
 // make ajax call
 var ajaxi = $.ajax({
-  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=1&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+wordCount+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=150&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+wordCount+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
   method: "GET",
   dataType: "json"
 });
@@ -35,6 +35,8 @@ function writePreps(num, container) {
     $(container).append("<p>for</p>");
     $(container).append("<p>and</p>");
     $(container).append("<p>is</p>");
+    $(container).append("<p>are</p>");
+    $(container).append("<p>not</p>");
     num--;
   }
 }

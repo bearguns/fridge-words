@@ -12,10 +12,19 @@ main {
   background-color: white;
   opacity: 0.9;
 }
+.poem {
+  position: relative;
+  margin-top: 10%;
+  height: 65px;
+  width: 60%;
+  margin-left: 25px;
+  float: left;
+}
 .showpoem {
+  right: 120px;
   font-size: 4vh;
-  height: 300px;
-  width: 400px;
+  height: 260px;
+  width: 460px;
   margin-left: 40px;
   background-color: white;
   position: absolute;
@@ -53,6 +62,11 @@ p {
   display: inline-block;
   cursor: default;
   background-color: white;
+  border: 1px solid white;
+  border-radius: 3px;
   font-size: 2vh;
-  margin: 2px;
+  margin: 4px;
+}
+.infreezer {
+  margin-top: 35px;
 }

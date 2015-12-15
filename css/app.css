@@ -65,7 +65,7 @@ p {
   border: 1px solid white;
   border-radius: 3px;
   font-size: 2vh;
-  margin: 4px;
+  margin: 6px;
 }
 .poem p {
   transform: rotate(0deg);

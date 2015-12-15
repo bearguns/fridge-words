@@ -1,29 +1,96 @@
-var wordCount = Math.floor(Math.random() * (20 - 10 + 1)) + 10;
-var wordList = [];
-function makeRandom() {
-  return Math.floor(Math.random() * (4 - 2 + 1)) + 1;
-};
-// make ajax call
-var ajaxi = $.ajax({
-  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+wordCount+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+var wordCount = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+var nouns = [];
+var verbs = [];
+var adjectives = [];
+var conjunctions = [];
+var interjections = [];
+var prepositions = [];
+//get all the words
+
+// get nouns
+var noungetter = $.ajax({
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+randomWordCount()+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
   method: "GET",
   dataType: "json"
 });
-// ajax call response capture
-ajaxi.done(function(response){
-  console.log(ajaxi);
+noungetter.done(function(response){
+  console.log(noungetter);
   response.forEach(function(i){
-    wordList.push(i);
-  });
-  wordList.forEach(function(i){
-    console.log(i.word);
-  });
+    nouns.push(i);
+  })
+  console.log(nouns);
 });
 function writeWords(array, container) {
   array.forEach(function(i){
     container.append("<p>" + i.word + "</p>");
   });
 }
+// get verbs
+var verbgetter = $.ajax({
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=verb&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+randomWordCount()+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+  method: "GET",
+  dataType: "json"
+});
+verbgetter.done(function(response){
+  console.log(verbgetter);
+  response.forEach(function(i){
+    verbs.push(i);
+  })
+  console.log(verbs);
+});
+// get adjectives
+var adjgetter = $.ajax({
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=adjective&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+randomWordCount()+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+  method: "GET",
+  dataType: "json"
+});
+adjgetter.done(function(response){
+  console.log(adjgetter);
+  response.forEach(function(i){
+    adjectives.push(i);
+  })
+  console.log(adjectives);
+});
+// get conjunctions
+var conjgetter = $.ajax({
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=conjunction&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+randomWordCount()+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+  method: "GET",
+  dataType: "json"
+});
+conjgetter.done(function(response){
+  console.log(conjgetter);
+  response.forEach(function(i){
+    conjunctions.push(i);
+  })
+  console.log(conjunctions);
+});
+// get interjections
+var jectgetter = $.ajax({
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=interjection&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+randomWordCount()+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+  method: "GET",
+  dataType: "json"
+});
+jectgetter.done(function(response){
+  console.log(jectgetter);
+  response.forEach(function(i){
+    interjections.push(i);
+  })
+  console.log(interjections);
+});
+// get prepositions
+var prepgetter = $.ajax({
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=preposition&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+randomWordCount()+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+  method: "GET",
+  dataType: "json"
+});
+prepgetter.done(function(response){
+  console.log(prepgetter);
+  response.forEach(function(i){
+    prepositions.push(i);
+  })
+  console.log(prepositions);
+});
+
 // write words to page
 function writePreps(num, container) {
   while (num > 0) {
@@ -81,3 +148,28 @@ function rotate(container) {
     $(fridgepeas[i]).css('transform', 'rotate(' + parseInt(rotato()) + 'deg)')
   }
 }
+// randomNumbers
+function makeRandom() {
+  return Math.floor(Math.random() * (4 - 2 + 1)) + 1;
+};
+// random number generator
+function randomWordCount() {
+  return Math.floor(Math.random()*(15-7+1)) +7;
+};
+
+// // make ajax call
+// var ajaxi = $.ajax({
+//   url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+wordCount+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+//   method: "GET",
+//   dataType: "json"
+// });
+// // ajax call response capture
+// ajaxi.done(function(response){
+//   console.log(ajaxi);
+//   response.forEach(function(i){
+//     wordList.push(i);
+//   });
+//   wordList.forEach(function(i){
+//     console.log(i.word);
+//   });
+// });

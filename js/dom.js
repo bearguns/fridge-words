@@ -9,8 +9,13 @@ $(document).ready(function() {
   var showpoem = $(".showpoem");
   overlay.hide();
   $(start).click(function(){
-    writePreps(makeRandom(), fridge);
-    writeWords(wordList, fridge);
+    writePreps(wordCount, fridge);
+    writeWords(nouns, fridge);
+    writeWords(verbs, fridge);
+    writeWords(adjectives, fridge);
+    writeWords(conjunctions, fridge);
+    writeWords(interjections, fridge);
+    writeWords(prepositions, fridge);
     rotate(fridge);
   });
   $("#submit").click(function(){
@@ -31,4 +36,5 @@ $("#return").click(function(){
 $("#share").click(function(){
   tweet(finalString);
 })
+
 });

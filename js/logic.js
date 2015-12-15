@@ -37,6 +37,7 @@ function writePreps(num, container) {
     $(container).append("<p>is</p>");
     $(container).append("<p>are</p>");
     $(container).append("<p>not</p>");
+    $(container).append("<p>, </p>");
     num--;
   }
 }

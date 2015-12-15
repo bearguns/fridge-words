@@ -5,7 +5,7 @@ function makeRandom() {
 };
 // make ajax call
 var ajaxi = $.ajax({
-  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=150&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+wordCount+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
+  url: "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit="+wordCount+"&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083",
   method: "GET",
   dataType: "json"
 });

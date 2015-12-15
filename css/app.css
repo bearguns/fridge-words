@@ -67,6 +67,6 @@ p {
   font-size: 2vh;
   margin: 4px;
 }
-.infreezer {
-  margin-top: 35px;
+.poem p {
+  transform: rotate(0deg);
 }

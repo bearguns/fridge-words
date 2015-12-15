@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  dragula([document.querySelector(".poem"), document.querySelector(".fridge")]);
+  var drake = dragula([document.querySelector(".poem"), document.querySelector(".fridge")]);
   var overlay = $(".overlay")
   var freezer = $(".freezer");
   var fridge = $(".fridge");
@@ -19,6 +19,13 @@ $(document).ready(function() {
     rotate(fridge);
     $(".fridge p").hide();
     $(".fridge p").fadeIn("xxslow");
+  });
+  drake.on('drop',function(el, target){
+    console.log(el);
+    console.log(target);
+    if (target.className === 'poem'){
+      el.style.transform = 'rotate(0deg)';
+    }
   });
   $("#submit").click(function(){
     displayToggle(overlay, fridge, freezer);

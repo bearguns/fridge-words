@@ -17,6 +17,8 @@ $(document).ready(function() {
     writeWords(interjections, fridge);
     writeWords(prepositions, fridge);
     rotate(fridge);
+    $(".fridge p").hide();
+    $(".fridge p").fadeIn("xxslow");
   });
   $("#submit").click(function(){
     displayToggle(overlay, fridge, freezer);

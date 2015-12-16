@@ -10,12 +10,12 @@ main {
   background-color: white;
 }
 h1{
+  padding: 5px;
   display: inline-block;
   font-family: air-americana;
   color: white;
   font-size: 5vh;
-  margin: 0 5px;
-  /*margin: 0 0;*/
+  margin: 0 0;
 }
 button {
   width: 5vw;
@@ -74,7 +74,7 @@ button {
 .poem {
   position: relative;
   margin-top: 5vh;
-  height: 23vh;
+  height: 20vh;
   width: 60%;
   margin-left: 1.5vw;
   float: left;

@@ -17,7 +17,15 @@ button {
   border: 1px solid #eeeeee;
   border-radius: 3px;
 }
-
+#start {
+  position: absolute;
+  z-index: auto;
+  margin-bottom: 0;
+}
+#submit {
+  position: absolute;
+  z-index: auto;
+}
 .overlay {
   position: absolute;
   height: 100%;

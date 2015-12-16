@@ -45,11 +45,11 @@ function hider(element) {
 function revealer(element) {
   element.fadeIn("slow");
 }
-
-function displayToggle(element1, element2, element3) {
-  element1.fadeToggle("slow");
-  element2.fadeToggle("slow");
-  element3.fadeToggle("slow");
+// change between main and poem-only fullscreen display
+function displayToggle(e) {
+  for (var i = 0; i < arguments.length; i++) {
+    arguments[i].fadeToggle('slow');
+  }
 }
 // post to twitter
 function tweet(string) {

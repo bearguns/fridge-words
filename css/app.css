@@ -13,18 +13,37 @@ button {
   width: 5vw;
   height: 4vh;
   margin: 1vh 2vw;
-  font-size: 1vh;
+  font-size: 1.5vh;
   border: 1px solid #eeeeee;
   border-radius: 3px;
 }
 #start {
   position: absolute;
+  width: 99%;
+  height: 80%;
+  background-color: white;
+  border: 0;
+  margin: 2.5% 0;
   z-index: auto;
-  margin-bottom: 0;
 }
 #submit {
   position: absolute;
+  width: 99%;
+  height: 80%;
+  background-color: white;
+  border: 0;
+  margin: 2.5% 0;
   z-index: auto;
+}
+#return {
+  position: relative;
+  display: block;
+  font-size: 2vh;
+  width: 80%;
+  height: 20%;
+  background-color: #eeeeee;
+  border: 0;
+  margin-bottom: 3px;
 }
 .overlay {
   position: absolute;
@@ -67,7 +86,9 @@ button {
   border-radius: 10px;
 }
 .titlecard {
+  position: relative;
   float: right;
+  padding: 0;
   margin-top: 2vh;
   margin-right: 1vh;
   height: 20%;

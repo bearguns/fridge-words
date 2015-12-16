@@ -4,7 +4,8 @@
 }
 main {
   position: relative;
-  width: 90vw;
+  width: 100vw;
+  max-width: 600px;
   height: 95vh;
   margin: 2.5vh 5vw;
   background-color: white;

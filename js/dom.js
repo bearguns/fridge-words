@@ -10,16 +10,10 @@ $(document).ready(function() {
   var showpoem = $(".showpoem");
   overlay.hide();
   submit.hide();
+  callWords(partsOfSpeech);
   $(start).click(function(){
-    callWords(partsOfSpeech);
-    // writePreps(wordCount, fridge);
-    // writeWords(nouns, fridge);
-    // writeWords(verbs, fridge);
-    // writeWords(adjectives, fridge);
-    // writeWords(conjunctions, fridge);
-    // writeWords(interjections, fridge);
-    // writeWords(prepositions, fridge);
-    // rotate(fridge);
+    writeWords(wordList, fridge);
+    rotate(fridge);
     $(".fridge p").hide();
     $(".fridge p").fadeIn("xxslow");
     $(start).fadeToggle();

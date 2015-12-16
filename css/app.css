@@ -45,6 +45,16 @@ button {
   border: 0;
   margin-bottom: 3px;
 }
+#share {
+  position: relative;
+  display: block;
+  font-size: 2vh;
+  width: 80%;
+  height: 20%;
+  background-color: #eeeeee;
+  border: 0;
+  margin-bottom: 3px;
+}
 .overlay {
   position: absolute;
   height: 100%;

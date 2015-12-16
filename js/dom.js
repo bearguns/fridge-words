@@ -11,14 +11,15 @@ $(document).ready(function() {
   overlay.hide();
   submit.hide();
   $(start).click(function(){
-    writePreps(wordCount, fridge);
-    writeWords(nouns, fridge);
-    writeWords(verbs, fridge);
-    writeWords(adjectives, fridge);
-    writeWords(conjunctions, fridge);
-    writeWords(interjections, fridge);
-    writeWords(prepositions, fridge);
-    rotate(fridge);
+    callWords(partsOfSpeech);
+    // writePreps(wordCount, fridge);
+    // writeWords(nouns, fridge);
+    // writeWords(verbs, fridge);
+    // writeWords(adjectives, fridge);
+    // writeWords(conjunctions, fridge);
+    // writeWords(interjections, fridge);
+    // writeWords(prepositions, fridge);
+    // rotate(fridge);
     $(".fridge p").hide();
     $(".fridge p").fadeIn("xxslow");
     $(start).fadeToggle();

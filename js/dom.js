@@ -29,6 +29,8 @@ $(document).ready(function() {
   drake.on('drop',function(el, target){
     if (target.className === 'poem'){
       el.style.transform = 'rotate(0deg)';
+    } else if (target.className === 'fridge') {
+      el.style.transform = 'rotate('+rotato()+'deg)'
     }
   });
   // ## submit button

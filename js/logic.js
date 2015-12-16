@@ -76,3 +76,16 @@ function makeRandom() {
 function randomWordCount() {
   return Math.floor(Math.random() * (15 - 7 + 1)) + 7;
 };
+// make string from poem contents
+function concatPoem(el) {
+var elArray = jQuery.makeArray($(el));
+finalString =[];
+for (var i = 0; i < elArray.length; i++) {
+  finalString.push(elArray[i].innerText);
+};
+return finalString.toString().split(',').join(' ');
+}
+// write poem to screen
+function displayPoem(string, container) {
+  container.append("<p>"+string+"</p>");
+}

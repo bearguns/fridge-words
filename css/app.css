@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'air-americana';
+  src: url(../fonts/air-americana.ttf);
+}
 main {
   position: relative;
   width: 90vw;
@@ -7,7 +11,11 @@ main {
 }
 h1{
   display: inline-block;
-  margin: 0 0;
+  font-family: air-americana;
+  color: white;
+  font-size: 5vh;
+  margin: 0 5px;
+  /*margin: 0 0;*/
 }
 button {
   width: 5vw;
@@ -69,7 +77,8 @@ button {
   width: 60%;
   margin-left: 1.5vw;
   float: left;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
+  border-radius: 3px;
 }
 .showpoem {
   margin: 25vh 20vw;
@@ -83,15 +92,15 @@ button {
 .freezer {
   height: 35%;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #137d74;
   border: 1px solid #eeeeee;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 .fridge {
   margin-top: 0.5vh;
   height: 70vh;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #137d74;
   border: 1px solid #eeeeee;
   border-radius: 10px;
 }

@@ -1,0 +1,9 @@
+{
+  "firebase": "fridge-words",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

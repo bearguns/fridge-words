@@ -11,7 +11,8 @@ main {
   background-color: white;
 }
 h1{
-  padding: 5px;
+  padding-left: 10px;
+  padding-top: 25px;
   display: inline-block;
   font-family: air-americana;
   color: white;
@@ -100,11 +101,11 @@ button {
 }
 .fridge {
   margin-top: 0.5vh;
-  height: 70vh;
+  height: 65%;
   width: 100%;
   background-color: #137d74;
   border: 1px solid #eeeeee;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 .titlecard {
   position: relative;

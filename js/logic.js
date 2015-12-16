@@ -3,7 +3,7 @@ var wordCount = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
 // empty array to catch our words from the api
 var wordList = [];
 // basic connectors for making sentences
-var basicWordList = ['the','and','for','while','can','not','do','is',',']
+var basicWordList = ['the','and','for','while','can','not','do','is','are','were','to','a','an'];
 // types of words we will be requesting from the api
 var partsOfSpeech = ['noun','verb','adjective','conjunction','interjection','preposition'];
 // make API call and put the words into the wordList array
@@ -92,5 +92,5 @@ function displayPoem(string, container) {
 // make special string for posting to twitter
 function tweetString(string){
   var newString = string.split(' ').join('%20');
-  $(".twitter-share-button").attr('href', 'https://twitter.com/intent/tweet?text='+newString+'&hashtags=fridgewords');
+  $(".twitter-share-button").attr('href', 'https://twitter.com/intent/tweet?text='+newString+' -http://bargeruns.github.io/fridge-words'+'&hashtags=fridgewords');
 }

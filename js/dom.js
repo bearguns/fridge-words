@@ -18,7 +18,7 @@ $(document).ready(function() {
   // ## start button
   $(start).click(function(){
     writeWords(wordList, fridge);
-    basicWords(wordCount, basicWordList, fridge);
+    basicWords(2, basicWordList, fridge);
     rotate($(".fridge > p"), fridge);
     $(".fridge p").hide();
     $(".fridge p").fadeIn("slow");

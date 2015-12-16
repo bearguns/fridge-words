@@ -1,8 +1,12 @@
+// small random number
 var wordCount = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+// empty array to catch our words from the api
 var wordList = [];
+// basic connectors for making sentences
 var basicWordList = ['the','and','for','while','can','not','do','is',',']
+// types of words we will be requesting from the api
 var partsOfSpeech = ['noun','verb','adjective','conjunction','interjection','preposition'];
-//get all the words
+// make API call and put the words into the wordList array
 function callWords(array) {
   for (var i = 0; i < array.length; i++) {
     var p = array[i];
@@ -18,7 +22,7 @@ function callWords(array) {
     });
   }
 }
-// write words to fridge container
+// write words from wordList to fridge container
 function writeWords(array, container) {
   array.forEach(function(i) {
     container.append("<p>" + i + "</p>");
@@ -51,26 +55,17 @@ function displayToggle(e) {
     arguments[i].fadeToggle('slow');
   }
 }
-// post to twitter
-function tweet(string) {
-  $.ajax({
-    url: "https://api.twitter.com/1.1/statuses/update.json",
-    method: "POST",
-    status: string
-  });
-}
-// make random rotation amount
+// random number generator, roughly half returned as negative numbers
 function rotato() {
   var num = Math.floor(Math.random() * 5) + 1; // this will get a number between 1 and 99;
   num *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
   return num;
 }
-// apply rotation
-function rotate(container) {
-  var fridgepeas = $(".fridge > p");
-  fridgepeas = jQuery.makeArray(fridgepeas);
-  for (var i = 0; i < fridgepeas.length; i++) {
-    $(fridgepeas[i]).css('transform', 'rotate(' + parseInt(rotato()) + 'deg)')
+// apply rotation to elements inside container, with random value thanks to line 59
+function rotate(el, container) {
+  var elArray = jQuery.makeArray(el);
+  for (var i = 0; i < elArray.length; i++) {
+    $(elArray[i]).css('transform', 'rotate('+parseInt(rotato())+'deg)');
   }
 }
 // randomNumbers

@@ -1,5 +1,6 @@
 var wordCount = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
 var wordList = [];
+var basicWordList = ['the','and','for','while','can','not','do','is',',']
 var partsOfSpeech = ['noun','verb','adjective','conjunction','interjection','preposition'];
 //get all the words
 function callWords(array) {
@@ -14,7 +15,6 @@ function callWords(array) {
       response.forEach(function(w){
         wordList.push(w.word);
       })
-      console.log(wordList);
     });
   }
 }
@@ -24,20 +24,12 @@ function writeWords(array, container) {
     container.append("<p>" + i + "</p>");
   });
 }
-// write words to page
-function writePreps(num, container) {
+// write basic words to page
+function basicWords(num, array, container) {
   while (num > 0) {
-    $(container).append("<p>the</p>");
-    $(container).append("<p>while</p>");
-    $(container).append("<p>can\'t</p>");
-    $(container).append("<p>did</p>");
-    $(container).append("<p>not</p>");
-    $(container).append("<p>for</p>");
-    $(container).append("<p>and</p>");
-    $(container).append("<p>is</p>");
-    $(container).append("<p>are</p>");
-    $(container).append("<p>not</p>");
-    $(container).append("<p>, </p>");
+    for (var i = 0; i < array.length; i++) {
+      container.append('<p>'+array[i]+'</p>');
+    }
     num--;
   }
 }

@@ -13,9 +13,10 @@ $(document).ready(function() {
   callWords(partsOfSpeech);
   $(start).click(function(){
     writeWords(wordList, fridge);
+    basicWords(wordCount, basicWordList, fridge);
     rotate(fridge);
     $(".fridge p").hide();
-    $(".fridge p").fadeIn("xxslow");
+    $(".fridge p").fadeIn("slow");
     $(start).fadeToggle();
     $(submit).fadeToggle("slow");
   });

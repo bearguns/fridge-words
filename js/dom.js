@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var drake = dragula([document.querySelector(".poem"), document.querySelector(".fridge")]);
   var overlay = $(".overlay")
+  var submit = $("#submit")
   var freezer = $(".freezer");
   var fridge = $(".fridge");
   var titlecard = $(".titlecard")
@@ -8,6 +9,7 @@ $(document).ready(function() {
   var finalString = [];
   var showpoem = $(".showpoem");
   overlay.hide();
+  submit.hide();
   $(start).click(function(){
     writePreps(wordCount, fridge);
     writeWords(nouns, fridge);
@@ -19,6 +21,8 @@ $(document).ready(function() {
     rotate(fridge);
     $(".fridge p").hide();
     $(".fridge p").fadeIn("xxslow");
+    $(start).fadeToggle();
+    $(submit).fadeToggle("slow");
   });
   drake.on('drop',function(el, target){
     console.log(el);

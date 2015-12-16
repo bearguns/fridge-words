@@ -89,3 +89,8 @@ return finalString.toString().split(',').join(' ');
 function displayPoem(string, container) {
   container.append("<p>"+string+"</p>");
 }
+// make special string for posting to twitter
+function tweetString(string){
+  var newString = string.split(' ').join('%20');
+  $(".twitter-share-button").attr('href', 'https://twitter.com/intent/tweet?text='+newString+'&hashtags=fridgewords');
+}

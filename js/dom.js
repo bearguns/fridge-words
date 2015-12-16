@@ -43,5 +43,9 @@ $("#return").click(function(){
   displayToggle(overlay,fridge,freezer);
   $(".showpoem p").remove();
 });
+// ## share button
+$("#share").click(function(){
+  tweetString(concatPoem($(".poem > p")));
+});
 // end of program
 });

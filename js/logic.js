@@ -3,7 +3,7 @@ var wordCount = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
 // empty array to catch our words from the api
 var wordList = [];
 // basic connectors for making sentences
-var basicWordList = ['the','and','for','while','can','not','do','is','are','were','to','a','an'];
+var basicWordList = ['the','and','as','Sean','for','while','can','not','do','is','are','were','to','a','an'];
 // types of words we will be requesting from the api
 var partsOfSpeech = ['noun','verb','adjective','conjunction','interjection','preposition'];
 // make API call and put the words into the wordList array
@@ -11,7 +11,7 @@ function callWords(array) {
   for (var i = 0; i < array.length; i++) {
     var p = array[i];
     var wordGetter = $.ajax({
-      url: 'http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech='+p+'&minCorpusCount=300&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit=' + randomWordCount() + '&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083',
+      url: 'http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech='+p+'&minCorpusCount=350&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit=' + randomWordCount() + '&api_key=78598b23ab7389d7d520b0972b20221b03e702bf7aba96083',
       method: "GET",
       dataType: "json"
     });

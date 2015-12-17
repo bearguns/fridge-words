@@ -1,6 +1,10 @@
 // small random number
 var wordCount = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
 // empty array to catch our words from the api
+// random number generator
+function randomWordCount() {
+  return Math.floor(Math.random() * (10 - 5 + 1)) + 5;
+};
 var wordList = [];
 // basic connectors for making sentences
 var basicWordList = ['the','and','as','Sean','for','while','can','not','do','is','are','were','to','a','an'];
@@ -89,10 +93,6 @@ function rotate(el, container) {
 // randomNumbers
 function makeRandom() {
   return Math.floor(Math.random() * (4 - 2 + 1)) + 1;
-};
-// random number generator
-function randomWordCount() {
-  return Math.floor(Math.random() * (15 - 7 + 1)) + 7;
 };
 // make string from poem contents
 function concatPoem(el) {

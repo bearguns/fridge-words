@@ -5,7 +5,8 @@
 main {
   position: relative;
   width: 100vw;
-  max-width: 70vw;
+  /*margin: 0 auto;*/
+  max-width: 800px;
   height: 95vh;
   margin: 2.5vh 5vw;
   background-color: white;

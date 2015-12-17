@@ -10,6 +10,8 @@ $(document).ready(function() {
   var start = $("#start");
   var reset = $("#reset");
   var back = $("#return");
+  var poem = $(".poem");
+  var buttons = $(".buttons");
   var finalString = [];
   var showpoem = $(".showpoem");
   // 'set the stage' for the user
@@ -37,7 +39,7 @@ $(document).ready(function() {
   });
   // ## submit button
   $(submit).click(function(){
-    displayToggle(overlay, fridge, freezer);
+    displayToggle(buttons, $(".fridge p"), $(".overlay"));
     displayPoem(concatPoem($(".poem > p")), showpoem);
 });
 // ## reset button
@@ -50,7 +52,7 @@ $(document).ready(function() {
   });
 // ## return button
 $(back).click(function(){
-  displayToggle(overlay,fridge,freezer);
+  displayToggle(buttons, $(".fridge p"), $(".overlay"));
   $(".showpoem p").remove();
 });
 // ## share button

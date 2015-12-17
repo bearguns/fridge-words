@@ -52,7 +52,7 @@ function revealer(element) {
 // change between main and poem-only fullscreen display
 function displayToggle(e) {
   for (var i = 0; i < arguments.length; i++) {
-    arguments[i].fadeToggle('slow');
+    arguments[i].fadeToggle();
   }
 }
 // random number generator, roughly half returned as negative numbers

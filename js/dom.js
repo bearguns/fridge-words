@@ -12,6 +12,7 @@ $(document).ready(function() {
   var back = $("#return");
   var shuffle = $("#shuffle");
   var poem = $(".poem");
+  var newwords = $("#newwords");
   var buttons = $(".buttons");
   var finalString = [];
   var showpoem = $(".showpoem");
@@ -19,6 +20,7 @@ $(document).ready(function() {
   overlay.hide();
   submit.hide();
   shuffle.hide();
+  newwords.hide();
   callWords(partsOfSpeech);
   // event listeners and controls
   // ## drag and drop functions
@@ -39,6 +41,7 @@ $(document).ready(function() {
     $(start).fadeToggle("fast");
     $(submit).fadeToggle("fast");
     $(shuffle).fadeToggle("fast");
+    $(newwords).fadeToggle("fast");
   });
 
   // ## submit button
@@ -62,6 +65,18 @@ $(shuffle).click(function(){
     basicWords(2, basicWordList, fridge);
     rotate($(".fridge > p"), fridge);
   });
+// new words
+$(newwords).click(function(){
+  $(".fridge p").remove();
+  wordList = [];
+  callWords(partsOfSpeech);
+  setTimeout(function(){
+    writeWords(wordList, fridge);
+  },800);
+  setTimeout(function(){
+    basicWords(2, basicWordList, fridge),
+    rotate($(".fridge > p"), fridge)},800);
+});
 // ## return button
 $(back).click(function(){
   displayToggle(buttons, $(".fridge p"), poem, $(".overlay"));

@@ -2,12 +2,16 @@
   font-family: 'air-americana';
   src: url(../fonts/air-americana.ttf);
 }
+body {
+  width: 100vw;
+  height: 100vh;
+}
 main {
   position: relative;
+  padding: 0;
   width: 100vw;
-  max-width: 70vw;
-  height: 95vh;
-  margin: 2.5vh 5vw;
+  height: 100vh;
+  margin: 0 0;
   background-color: white;
 }
 h1{
@@ -67,15 +71,15 @@ button {
 }
 .freezer {
   height: 35%;
-  width: 100%;
+  width: 100vw;
   background-color: #5fc2c8;
   border: 1px solid #eeeeee;
   border-radius: 10px 10px 0 0;
 }
 .fridge {
   margin-top: 0.5vh;
-  height: 65%;
-  width: 100%;
+  height: 70%;
+  width: 100vw;
   background-color: #5fc2c8;
   border: 1px solid #eeeeee;
   border-radius: 0 0 10px 10px;
@@ -163,18 +167,4 @@ button {
 #widget {
   position: relative;
   margin-top: 60%;
-}
-@media(max-device-width:640px) {
-  main {
-    width: 100vw;
-    padding: 0;
-    margin: 0 0;
-  }
-  .freezer {
-    width: 100vw;
-  }
-  .fridge{
-    width: 100vw;
-    height: 70vh;
-  }
 }

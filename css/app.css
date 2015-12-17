@@ -27,7 +27,7 @@ p {
   background-color: white;
   border: 1px solid white;
   border-radius: 3px;
-  font-size: 2.5vh;
+  font-size: 2.25vh;
   margin: 6px;
 }
 button {
@@ -60,7 +60,7 @@ button {
   position: relative;
   margin: 2.5% 1%;
   height: 65%;
-  width: 85%;
+  width: 80%;
   background-color: #5fc2c8;
   opacity: 1.0;
   clear: both;
@@ -169,6 +169,9 @@ button {
     width: 100vw;
     padding: 0;
     margin: 0 0;
+  }
+  p {
+    font-size: 2.5vh;
   }
   .freezer {
     width: 100vw;

@@ -39,20 +39,20 @@ $(document).ready(function() {
   });
   // ## submit button
   $(submit).click(function(){
-    displayToggle(buttons, $(".fridge p"), $(".overlay"));
+    displayToggle(buttons, $(".fridge p"), poem, $(".overlay"));
     displayPoem(concatPoem($(".poem > p")), showpoem);
 });
 // ## reset button
   $(reset).click(function(){
+    $(".fridge p").remove();
     $(".poem").empty();
-    $(fridge).empty();
     writeWords(wordList, fridge);
     basicWords(2, basicWordList, fridge);
     rotate($(".fridge > p"), fridge);
   });
 // ## return button
 $(back).click(function(){
-  displayToggle(buttons, $(".fridge p"), $(".overlay"));
+  displayToggle(buttons, $(".fridge p"), poem, $(".overlay"));
   $(".showpoem p").remove();
 });
 // ## share button

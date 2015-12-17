@@ -29,26 +29,7 @@ button {
   border: 1px solid #eeeeee;
   border-radius: 3px;
 }
-#return {
-  position: relative;
-  display: block;
-  font-size: 2vh;
-  width: 80%;
-  height: 10%;
-  background-color: #eeeeee;
-  border: 0;
-  margin-bottom: 3px;
-}
-#share {
-  position: relative;
-  display: block;
-  font-size: 2vh;
-  width: 80%;
-  height: 10%;
-  background-color: #eeeeee;
-  border: 0;
-  margin-bottom: 3px;
-}
+
 .overlay {
   position: relative;
   height: 90%;
@@ -72,6 +53,7 @@ button {
   width: 85%;
   background-color: #5fc2c8;
   opacity: 1.0;
+  clear: both;
 }
 .freezer {
   height: 35%;
@@ -93,6 +75,16 @@ button {
   margin: 7px 3px;
   width: 20%;
   height: 50%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.overlaybuttons {
+  position: absolute;
+  margin: 7px 3px;
+  width: 20%;
+  height: 30%;
   float: right;
   display: flex;
   flex-direction: column;
@@ -124,7 +116,24 @@ button {
   margin: 2.5% 0;
   z-index: 1;
 }
-
+#return {
+  /*position: absolute;*/
+  float: right;
+  width: 15%;
+  height: 10%;
+  background-color: white;
+  border: 0;
+  z-index: auto;
+}
+#share {
+  /*position: relative;*/
+  float: right;
+  clear: right;
+  width: 15%;
+  height: 10%;
+  background-color: white;
+  border: 0;
+}
 p {
   font-family: courier;
   display: inline-block;
@@ -140,7 +149,7 @@ p {
 }
 
 .showpoem p {
-  font-size: 5vh;
+  font-size: 3.5vh;
 }
 @media (max-width: 500px){
   main {

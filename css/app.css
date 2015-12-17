@@ -11,6 +11,7 @@ main {
   background-color: white;
 }
 h1{
+  float: right;
   padding-left: 10px;
   padding-top: 25px;
   display: inline-block;
@@ -27,24 +28,6 @@ button {
   font-size: 2.5vh;
   border: 1px solid #eeeeee;
   border-radius: 3px;
-}
-#start {
-  position: absolute;
-  width: 99%;
-  height: 80%;
-  background-color: white;
-  border: 0;
-  margin: 2.5% 0;
-  z-index: auto;
-}
-#submit {
-  position: absolute;
-  width: 99%;
-  height: 80%;
-  background-color: white;
-  border: 0;
-  margin: 2.5% 0;
-  z-index: auto;
 }
 #return {
   position: relative;
@@ -80,7 +63,6 @@ button {
   width: 60%;
   margin-left: 1.5vw;
   float: left;
-  /*border: 1px solid black;*/
   border-radius: 3px;
 }
 .showpoem {
@@ -107,18 +89,43 @@ button {
   border: 1px solid #eeeeee;
   border-radius: 0 0 10px 10px;
 }
-.titlecard {
+.buttons {
   position: relative;
+  margin: 7px 3px;
+  width: 20%;
+  height: 50%;
   float: right;
-  padding: 0;
-  margin-top: 2vh;
-  margin-right: 1vh;
-  height: 20%;
-  width: 30%;
-  background-color: white;
-  border: 2px solid lightgray;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+#start {
+  position: absolute;
+  width: 99%;
+  height: 45%;
+  background-color: white;
+  border: 0;
+  margin: 2.5% 0;
+  z-index: auto;
+}
+#reset {
+  /*position: relative;*/
+  width: 99%;
+  height: 45%;
+  background-color: white;
+  border: 0;
+  margin: 2.5% 0;
+}
+#submit {
+  /*position: absolute;*/
+  width: 99%;
+  height: 45%;
+  background-color: white;
+  border: 0;
+  margin: 2.5% 0;
+  z-index: 1;
+}
+
 p {
   font-family: courier;
   display: inline-block;
@@ -136,7 +143,12 @@ p {
 .showpoem p {
   font-size: 5vh;
 }
-@media (max-width: 414px){
+@media (max-width: 500px){
+  main {
+    width: 100%;
+    max-width: 400px
+    height: 100%;
+  }
   p {
     font-size: 3vh;
   }

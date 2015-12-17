@@ -3,11 +3,13 @@ $(document).ready(function() {
   var drake = dragula([document.querySelector(".poem"), document.querySelector(".fridge")]);
   // jQuery DOM variables
   var overlay = $(".overlay")
-  var submit = $("#submit")
   var freezer = $(".freezer");
   var fridge = $(".fridge");
   var titlecard = $(".titlecard")
+  var submit = $("#submit")
   var start = $("#start");
+  var reset = $("#reset");
+  var back = $("#return");
   var finalString = [];
   var showpoem = $(".showpoem");
   // 'set the stage' for the user
@@ -22,8 +24,8 @@ $(document).ready(function() {
     rotate($(".fridge > p"), fridge);
     $(".fridge p").hide();
     $(".fridge p").fadeIn("slow");
-    $(start).fadeToggle();
-    $(submit).fadeToggle("slow");
+    $(start).fadeToggle("fast");
+    $(submit).fadeToggle("fast");
   });
   // ## drag and drop functions
   drake.on('drop',function(el, target){
@@ -34,12 +36,20 @@ $(document).ready(function() {
     }
   });
   // ## submit button
-  $("#submit").click(function(){
+  $(submit).click(function(){
     displayToggle(overlay, fridge, freezer);
     displayPoem(concatPoem($(".poem > p")), showpoem);
 });
+// ## reset button
+  $(reset).click(function(){
+    $(".poem").empty();
+    $(fridge).empty();
+    writeWords(wordList, fridge);
+    basicWords(2, basicWordList, fridge);
+    rotate($(".fridge > p"), fridge);
+  });
 // ## return button
-$("#return").click(function(){
+$(back).click(function(){
   displayToggle(overlay,fridge,freezer);
   $(".showpoem p").remove();
 });

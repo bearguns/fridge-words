@@ -93,7 +93,7 @@ button {
 #start {
   position: absolute;
   width: 99%;
-  height: 45%;
+  height: 30%;
   background-color: white;
   border: 0;
   margin: 2.5% 0;
@@ -102,7 +102,15 @@ button {
 #reset {
   /*position: relative;*/
   width: 99%;
-  height: 45%;
+  height: 30%;
+  background-color: white;
+  border: 0;
+  margin: 2.5% 0;
+}
+#shuffle {
+  /*position: relative;*/
+  width: 99%;
+  height: 30%;
   background-color: white;
   border: 0;
   margin: 2.5% 0;
@@ -110,7 +118,7 @@ button {
 #submit {
   /*position: absolute;*/
   width: 99%;
-  height: 45%;
+  height: 30%;
   background-color: white;
   border: 0;
   margin: 2.5% 0;

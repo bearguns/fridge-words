@@ -4,7 +4,7 @@
 }
 main {
   position: relative;
-  width: 50vw;
+  width: 60vw;
   /*margin: 0 auto;*/
   max-width: 640px;
   height: 95vh;
@@ -177,7 +177,7 @@ button {
   position: relative;
   margin-top: 60%;
 }
-@media(max-device-width:640px) {
+@media(max-device-width:400px) {
   main {
     width: 100vw;
     padding: 0;

@@ -65,7 +65,7 @@ $(shuffle).click(function(){
     basicWords(2, basicWordList, fridge);
     rotate($(".fridge > p"), fridge);
   });
-// new words
+// ## new words button
 $(newwords).click(function(){
   $(".fridge p").remove();
   wordList = [];

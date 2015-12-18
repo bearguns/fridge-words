@@ -5,8 +5,6 @@
 main {
   position: relative;
   width: 55vw;
-  /*margin: 0 auto;*/
-  /*max-width: 640px;*/
   height: 95vh;
   margin-top: 2.5vh;
   margin-bottom: 2.5vh;
@@ -115,7 +113,6 @@ button {
   z-index: auto;
 }
 #reset {
-  /*position: relative;*/
   width: 99%;
   height: 30%;
   background-color: white;
@@ -123,7 +120,6 @@ button {
   margin: 2.5% 0;
 }
 #newwords {
-  /*position: relative;*/
   width: 99%;
   height: 30%;
   background-color: white;
@@ -131,7 +127,6 @@ button {
   margin: 1.5% 0;
 }
 #shuffle {
-  /*position: relative;*/
   width: 99%;
   height: 30%;
   background-color: white;
@@ -139,7 +134,6 @@ button {
   margin: 2.5% 0;
 }
 #submit {
-  /*position: absolute;*/
   width: 99%;
   height: 30%;
   background-color: white;
@@ -148,7 +142,6 @@ button {
   z-index: 1;
 }
 #return {
-  /*position: absolute;*/
   float: right;
   width: 15%;
   height: 10%;
@@ -157,7 +150,6 @@ button {
   z-index: auto;
 }
 #share {
-  /*position: relative;*/
   float: right;
   clear: right;
   width: 15%;
@@ -178,7 +170,6 @@ button {
   margin-top: 60%;
 }
 @media screen and (max-width: 660px) {
-  /* UNDER 500px CSS here */
   main {
     width: 100vw;
     padding: 0;

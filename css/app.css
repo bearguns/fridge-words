@@ -6,7 +6,7 @@ main {
   position: relative;
   width: 60vw;
   /*margin: 0 auto;*/
-  max-width: 640px;
+  /*max-width: 640px;*/
   height: 95vh;
   margin-top: 2.5vh;
   margin-bottom: 2.5vh;
@@ -53,7 +53,7 @@ button {
 }
 .poem {
   position: relative;
-  margin-top: 5vh;
+  margin-top: 1.5vh;
   height: 20vh;
   width: 60%;
   margin-left: 1.5vw;
@@ -72,7 +72,7 @@ button {
 .freezer {
   position: relative;
   height: 35%;
-  width: 100%;
+  width: 80%;
   background-color: #5fc2c8;
   border: 1px solid #eeeeee;
   border-radius: 10px 10px 0 0;
@@ -80,7 +80,7 @@ button {
 .fridge {
   margin-top: 0.5vh;
   height: 65%;
-  width: 100%;
+  width: 80%;
   background-color: #5fc2c8;
   border: 1px solid #eeeeee;
   border-radius: 0 0 10px 10px;
@@ -128,7 +128,7 @@ button {
   height: 30%;
   background-color: white;
   border: 0;
-  margin: 2.5% 0;
+  margin: 1.5% 0;
 }
 #shuffle {
   /*position: relative;*/
@@ -177,7 +177,25 @@ button {
   position: relative;
   margin-top: 60%;
 }
-@media(max-device-width:400px) {
+@media screen and (max-width: 660px) {
+  /* UNDER 500px CSS here */
+  main {
+    width: 100vw;
+    padding: 0;
+    margin: 0 0;
+  }
+  p {
+    font-size: 2.5vh;
+  }
+  .freezer {
+    width: 100vw;
+  }
+  .fridge{
+    width: 100vw;
+    height: 70vh;
+  }
+}
+@media(max-device-width:640px) {
   main {
     width: 100vw;
     padding: 0;
